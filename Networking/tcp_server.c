@@ -152,20 +152,18 @@ label:
 				goto BIND;
 			}
 			perror("bind: ");
+			close(sockfd);
 			continue;
 		}
 		//leave the loop
 		break; 
 	}
 	//check if nothing bit (ie reached NULL without a bound socket)
-	if(sockfd == -1){
-		perror("socket failed: ");
+	if(p == NULL){
+		perror("failed to find socket");
 		exit(1);
 	}
-	else if(status == -1){
-		perror("bind failed: ");
-		exit(1);
-	}
+	
 	//dont need anymore
 	freeaddrinfo(res);	
 	
