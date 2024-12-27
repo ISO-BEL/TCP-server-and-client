@@ -1,7 +1,6 @@
-# Why Im Learning
+## Why Im Learning
 * Learning this because future projects i have require understanding networking and the TCP protocol.
 * My next project uses the HTTP protocol which as a protocol is built on top of TCP (execpt for http/3.0 which uses UDP and QUIC).
-* Its enjoyable to learn
 
 ## Goals:
 * understand socket api.
@@ -19,7 +18,7 @@
 * handle signals causing system calls to interupt.
 * error handling for every system call.
 * preventing zombie processes from simultaneous same signals.
-* insure all of the message is sent and recv'ed (is byte stream).
+* insure all of the message is sent and recv'ed.
 
 ### Possibly An Improvement
 * use the sigpromask() function to catch signals/clean up zombies only in specific parts of the code.
